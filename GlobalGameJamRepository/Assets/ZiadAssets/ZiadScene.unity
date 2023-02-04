@@ -245,9 +245,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfHearts: 3
-  hearts: []
-  fullHeart: {fileID: 21300000, guid: 9a85b1e4f2280b1419a027b33df70723, type: 3}
-  emptyHeart: {fileID: 21300000, guid: acd4ae8df75a4144eb549e8e93f67d62, type: 3}
+  hearts:
+  - {fileID: 2123220219}
+  - {fileID: 1339443947}
+  - {fileID: 2057510779}
 --- !u!65 &56312984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1057,7 +1058,7 @@ GameObject:
   - component: {fileID: 2057510780}
   - component: {fileID: 2057510781}
   m_Layer: 0
-  m_Name: silhouette-girl-black (2)
+  m_Name: silhouette-girl-white (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

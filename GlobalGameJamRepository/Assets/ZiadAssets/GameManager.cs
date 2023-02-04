@@ -18,11 +18,42 @@ public class GameManager : MonoBehaviour
     public void DecreaseHealth()
     {
         if (healthPoints > 0)
+        {
             healthPoints--;
+            UpdateHealth();
+        }
     }
     public void IncreaseHealth()
     {
         if (healthPoints < healthScript.numOfHearts)
+        {
             healthPoints++;
+            UpdateHealth();
+        }
+    }
+    public void UpdateHealth()
+    {
+        if (healthPoints == 1)
+        {
+            healthScript.hearts[0].SetActive(true);
+            healthScript.hearts[1].SetActive(false);
+            healthScript.hearts[2].SetActive(false);
+        } else if (healthPoints == 2)
+        {
+            healthScript.hearts[0].SetActive(true);
+            healthScript.hearts[1].SetActive(true);
+            healthScript.hearts[2].SetActive(false);
+        } else if (healthPoints == 3)
+        {
+            healthScript.hearts[0].SetActive(true);
+            healthScript.hearts[1].SetActive(true);
+            healthScript.hearts[2].SetActive(true);
+        } else
+        {
+            healthScript.hearts[0].SetActive(false);
+            healthScript.hearts[1].SetActive(false);
+            healthScript.hearts[2].SetActive(false);
+        }
+
     }
 }

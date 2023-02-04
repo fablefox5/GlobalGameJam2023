@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public int numOfHearts;
-    [SerializeField]
-    private Image[] hearts;
-    [SerializeField]
+    public GameObject[] hearts;
+    /*[SerializeField]
     private Sprite fullHeart;
     [SerializeField]
-    private Sprite emptyHeart;
+    private Sprite emptyHeart;*/
 }
