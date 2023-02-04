@@ -91,4 +91,9 @@ public class GameManager : MonoBehaviour
         isHurt = false;
         playerAnimator.SetBool("isHurt", false);
     }
+    public bool ChangeIsDead(bool dead)
+    {
+        dead = !dead; //use this to pause/unpause, if dead then 0 movement
+        return dead;
+    }
 }
