@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     //booleans
     public bool isHurt = false;
     public bool isDead = false;
-    public bool restart = false; //differentiates setting isdead to true for a level reset or an unpause
+    //public bool restart = false; //differentiates setting isdead to true for a level reset or an unpause
     //
 
     void Awake()
@@ -107,10 +107,10 @@ public class GameManager : MonoBehaviour
     public void ChangeIsDead()
     { //use this to pause/unpause, if dead then 0 movement
         isDead = !isDead;
-        if (restart = true)
-        {
-            SceneChange(LevelSegment.Neighborhood);
-            restart = false;
-        }
+        /*if (restart = true)
+        {*/
+        SceneChange(LevelSegment.Neighborhood);
+            /*restart = false;
+        }*/
     }
 }
