@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e9d5d95168402c4c9a578de409d4f3c
+guid: 38e0f0cf59f53d1468cef567647b4c86
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Leaves1Mat
-    second: {fileID: 2100000, guid: 8f473ecb786673b4eb811f2eeb1f909b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Trunk1Mat
-    second: {fileID: 2100000, guid: 4a9263c0acb15ad4fb1aee878c0251a7, type: 2}
+      name: pSphere31Mat
+    second: {fileID: 2100000, guid: e21a4ec44fc07ca4fb6ea3498fcf90b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
