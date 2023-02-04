@@ -20,7 +20,11 @@ public class Treadmill : MonoBehaviour
         {
             treadmillSpeed = 0.5f;
         } else if (GameManager.instance.isHurt == false)
+        {
+            treadmillSpeed = 1f;
+        }
         rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
+        //rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
         if (transform.position.z < -respawnPoint) //min to move off screen
         {
             Vector3 resetPosition = new Vector3(0, 0, (2 * respawnPoint));
