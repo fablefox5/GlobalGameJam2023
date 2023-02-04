@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 3; // Initial player movement forward speed
     public float upAndDownSpeed = 3; // Player's up and down speed
-    // need a jump later
 
 
     void Update() // Update is called once per frame
