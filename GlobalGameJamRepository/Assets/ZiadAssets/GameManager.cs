@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public Health healthScript;
     public enum LevelSegment {Neighborhood};
+    public Animator playerAnimator;
+
+    //booleans
+    public bool isHurt = false;
+    public bool isDead = false;
+    //
 
     void Awake()
     {
@@ -24,6 +30,11 @@ public class GameManager : MonoBehaviour
         {
             healthPoints--;
             UpdateHealth();
+            StartCoroutine(HurtTimer());
+        } else
+        {
+            isDead = true;
+            playerAnimator.SetBool("isDead", true);
         }
     }
     public void IncreaseHealth()
@@ -63,5 +74,13 @@ public class GameManager : MonoBehaviour
     {
         //Destroy everything in groundholder if != null
         //Instantiate two new prefabs for ground
+    }
+    IEnumerator HurtTimer()
+    {
+        isHurt = true;
+        playerAnimator.SetBool("isHurt", true);
+        yield return new WaitForSeconds(1.1f);
+        isHurt = false;
+        playerAnimator.SetBool("isHurt", false);
     }
 }
