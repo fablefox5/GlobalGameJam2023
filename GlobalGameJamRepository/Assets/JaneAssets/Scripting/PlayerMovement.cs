@@ -13,13 +13,14 @@ public class PlayerMovement : MonoBehaviour
     float rayLength = 1f;
 
     public Rigidbody rigidBody;
+
     public Vector3 jump;
     public float jumpAmt = 2.0f;
-
     public bool isGrounded;
    
     void Start()
     {
+        rigidBody = GetComponent<Rigidbody>();
         currentDirection = up;
         nextPosition = Vector3.left;
         destination = transform.position;
@@ -40,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
-
     }
 
     void Move()
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Vector3.Distance(destination,transform.position) <= 0.00001f)
         {
-            transform.localEulerAngles = currentDirection;
+            //transform.localEulerAngles = currentDirection;
             if (canMove)
             {
                 if (Valid())
@@ -78,10 +78,16 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+
+            // set player animator bool to isJumping
+            // when collision with obstacle, the obstacle will check isHurt 
+            // Dont actually apply force
             Debug.Log("jump works");
 
-            rigidBody.AddForce(jump * jumpAmt, ForceMode.Impulse);
+           // rigidBody.AddForce(jump * jumpAmt, ForceMode.Impulse);
+
             isGrounded = false;
+            StartCoroutine(JumpCoolDown());
         }
 
         bool Valid()
@@ -99,6 +105,12 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             return true;
+        }
+
+        IEnumerator JumpCoolDown() { // When jumping
+            isGrounded = false;
+            yield return new WaitForSecondsRealtime(1); // Player is invulnerable
+            isGrounded = true;
         }
     }
 
