@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2af0b3aab3863144387a553b32e5a28d
+guid: 2156a555195655146a79393f8e6b5c4b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: LeavesMat
-    second: {fileID: 2100000, guid: 9180e9069b1736540bdd23ebe034fcb9, type: 2}
+      name: LargePoleMat
+    second: {fileID: 2100000, guid: 131ab31d32585954bb255781637206b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TrunkMat
-    second: {fileID: 2100000, guid: 4a9263c0acb15ad4fb1aee878c0251a7, type: 2}
+      name: SmallPoleMat
+    second: {fileID: 2100000, guid: 131ab31d32585954bb255781637206b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WiresMat
+    second: {fileID: 2100000, guid: 39e5d4519c812ac419b3e12a443069ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2af0b3aab3863144387a553b32e5a28d
+guid: 6f464eefdbe523446a9366d97291988d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: LeavesMat
-    second: {fileID: 2100000, guid: 9180e9069b1736540bdd23ebe034fcb9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TrunkMat
-    second: {fileID: 2100000, guid: 4a9263c0acb15ad4fb1aee878c0251a7, type: 2}
+      name: StreetMat
+    second: {fileID: 2100000, guid: 8f473ecb786673b4eb811f2eeb1f909b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
