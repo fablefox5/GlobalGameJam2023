@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fa8967fb2b934f45a294d552e4076ed
+guid: fb284df64ef9ddf4795790ddb570f85d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,28 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CurbLineMat
-    second: {fileID: 2100000, guid: a6c5aae4aedb039419f8b53c91bf2c46, type: 2}
+      name: LargePoleMat
+    second: {fileID: 2100000, guid: 131ab31d32585954bb255781637206b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: GrassMat
-    second: {fileID: 2100000, guid: 8f473ecb786673b4eb811f2eeb1f909b, type: 2}
+      name: SmallPoleMat
+    second: {fileID: 2100000, guid: 131ab31d32585954bb255781637206b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: RoadLineMat
-    second: {fileID: 2100000, guid: a6c5aae4aedb039419f8b53c91bf2c46, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RoadMat
+      name: WiresMat
     second: {fileID: 2100000, guid: 39e5d4519c812ac419b3e12a443069ee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SidewalkMat
-    second: {fileID: 2100000, guid: c098d540c47961943b34e03db5106538, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
