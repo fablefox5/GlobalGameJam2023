@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rigidBody;
 
-    public Vector3 jump;
-    public float jumpAmt = 2.0f;
-    public bool isGrounded;
+    //public Vector3 jump;
+    //public float jumpAmt = 2.0f;
+    public bool isGrounded; // Boolean that tells us if the player is on the ground
    
     void Start()
     {
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         currentDirection = up;
         nextPosition = Vector3.left;
         destination = transform.position;
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        //jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     
@@ -48,17 +48,18 @@ public class PlayerMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, destination, upAndDownSpeed * Time.deltaTime);
 
         // Movement
-        if ((Input.GetKeyDown(KeyCode.W))) 
+        
+        if ((Input.GetKeyDown(KeyCode.W)) && canMove) 
         {
             nextPosition = Vector3.left;
             currentDirection = Vector3.left;
-            canMove = true;
+            //canMove = true;
         }
-        if ((Input.GetKeyDown(KeyCode.S)))
+        if ((Input.GetKeyDown(KeyCode.S)) && canMove)
         {
             nextPosition = Vector3.right;
             currentDirection = Vector3.right;
-            canMove = true;
+            //canMove = true;
         }
 
         if (Vector3.Distance(destination,transform.position) <= 0.00001f)
@@ -76,18 +77,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // When the player is pressing space and is on the ground
         {
-
-            // set player animator bool to isJumping
-            // when collision with obstacle, the obstacle will check isHurt 
-            // Dont actually apply force
+            // rigidBody.AddForce(jump * jumpAmt, ForceMode.Impulse);
+            
             Debug.Log("jump works");
 
-           // rigidBody.AddForce(jump * jumpAmt, ForceMode.Impulse);
+            isGrounded = false; // The player is no longer on the ground
 
-            isGrounded = false;
-            StartCoroutine(JumpCoolDown());
+            StartCoroutine(JumpCoolDown()); // Player is vulnerable while jumping
         }
 
         bool Valid()
@@ -108,10 +106,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         IEnumerator JumpCoolDown() { // When jumping
-            isGrounded = false;
-            yield return new WaitForSecondsRealtime(1); // Player is invulnerable
-            isGrounded = true;
+            Debug.Log("jump coroutine entered");
+            isGrounded = false; // The player is in the air
+            yield return new WaitForSecondsRealtime(1); // Player is invulnerable for 3 seconds
+            isGrounded = true; // The player is on the ground and is vulnerable
         }
+
     }
 
 }

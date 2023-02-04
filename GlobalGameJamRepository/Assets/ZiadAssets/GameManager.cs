@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool isHurt = false;
     public bool isDead = false;
     //public bool restart = false; //differentiates setting isdead to true for a level reset or an unpause
-    //
+    
 
     void Awake()
     {
@@ -33,13 +33,13 @@ public class GameManager : MonoBehaviour
             healthPoints--;
             Debug.Log(healthPoints);
             UpdateHealth();
-            if (healthPoints == 0)
+            if (healthPoints == 0) // When no more health
             {
-                isDead = true;
+                isDead = true; // Player is dead
                 playerAnimator.SetBool("isDead", true);
-            } else
+            } else // When there is still health
             {
-                StartCoroutine(HurtTimer());
+                StartCoroutine(HurtTimer()); // Start hurt timer
             }
         } else
         {
@@ -98,19 +98,29 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator HurtTimer()
     {
-        isHurt = true;
+        isHurt = true; // Player is hurt
         playerAnimator.SetBool("isHurt", true);
         yield return new WaitForSeconds(1.1f);
-        isHurt = false;
+        isHurt = false; // Player is not hurt 
         playerAnimator.SetBool("isHurt", false);
     }
     public void ChangeIsDead()
     { //use this to pause/unpause, if dead then 0 movement
+        if(isDead == true)
+        {
+            healthScript.movingPlayer.canMove = false;
+        }
+        
         isDead = !isDead;
         /*if (restart = true)
         {*/
         SceneChange(LevelSegment.Neighborhood);
             /*restart = false;
         }*/
+    }
+
+    public void StartByMove()
+    {
+        healthScript.movingPlayer.canMove = true;
     }
 }
