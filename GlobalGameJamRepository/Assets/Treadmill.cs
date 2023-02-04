@@ -7,6 +7,7 @@ public class Treadmill : MonoBehaviour
     private Rigidbody rb;
     public float treadmillSpeed;
     public float respawnPoint;
+    public GameObject gameOver;
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -16,6 +17,7 @@ public class Treadmill : MonoBehaviour
         if (GameManager.instance.isDead == true)
         {
             treadmillSpeed = 0f;
+            gameOver.SetActive(true);
         } else if (GameManager.instance.isHurt == true)
         {
             treadmillSpeed = 0.5f;
