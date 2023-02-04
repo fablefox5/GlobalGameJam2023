@@ -16,8 +16,9 @@ public class Treadmill : MonoBehaviour
     {
         if (GameManager.instance.isDead == true)
         {
-            treadmillSpeed = 0f;
+            treadmillSpeed = 0f; //stops ground moving, need new variable for pausing time.timescale = 0;
             gameOver.SetActive(true);
+            GameManager.instance.restart = true; //to differentiate between stopping
         } else if (GameManager.instance.isHurt == true)
         {
             treadmillSpeed = 0.5f;

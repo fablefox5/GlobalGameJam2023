@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     public Health healthScript;
     public enum LevelSegment {Neighborhood};
     public Animator playerAnimator;
+    public GameObject groundParent;
 
     //booleans
     public bool isHurt = false;
     public bool isDead = false;
+    public bool restart = false; //differentiates setting isdead to true for a level reset or an unpause
     //
 
     void Awake()
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-        SceneChange(LevelSegment.Neighborhood);
+        //SceneChange(LevelSegment.Neighborhood);
     }
     public void DecreaseHealth()
     {
@@ -78,10 +80,21 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    public void SceneChange(LevelSegment segment)
+    public void SceneChange(LevelSegment segment) //this 
     {
         //Destroy everything in groundholder if != null
-        //Instantiate two new prefabs for ground
+        if (groundParent.transform.childCount > 0)
+        {
+            for (var i = groundParent.transform.childCount - 1; i >= 0; i--)
+            {
+                Object.Destroy(groundParent.transform.GetChild(i).gameObject);
+            }
+        }
+        if (segment == LevelSegment.Neighborhood)
+        {
+            //Instantiate()
+        }
+        //Instantiate two new prefabs for ground based on if statement
     }
     IEnumerator HurtTimer()
     {
@@ -91,9 +104,13 @@ public class GameManager : MonoBehaviour
         isHurt = false;
         playerAnimator.SetBool("isHurt", false);
     }
-    public bool ChangeIsDead(bool dead)
-    {
-        dead = !dead; //use this to pause/unpause, if dead then 0 movement
-        return dead;
+    public void ChangeIsDead()
+    { //use this to pause/unpause, if dead then 0 movement
+        isDead = !isDead;
+        if (restart = true)
+        {
+            SceneChange(LevelSegment.Neighborhood);
+            restart = false;
+        }
     }
 }
