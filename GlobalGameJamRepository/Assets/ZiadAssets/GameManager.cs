@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int healthPoints = 3;
     [SerializeField]
-    public GameObject healthScript;
+    public Health healthScript;
     void Awake()
     {
         if (instance == null)
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
     public void IncreaseHealth()
     {
-        if (healthPoints < numberOfHearts)
+        if (healthPoints < healthScript.numOfHearts)
             healthPoints++;
     }
 }
