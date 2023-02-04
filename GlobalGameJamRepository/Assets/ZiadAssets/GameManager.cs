@@ -29,8 +29,16 @@ public class GameManager : MonoBehaviour
         if (healthPoints > 0)
         {
             healthPoints--;
+            Debug.Log(healthPoints);
             UpdateHealth();
-            StartCoroutine(HurtTimer());
+            if (healthPoints == 0)
+            {
+                isDead = true;
+                playerAnimator.SetBool("isDead", true);
+            } else
+            {
+                StartCoroutine(HurtTimer());
+            }
         } else
         {
             isDead = true;
