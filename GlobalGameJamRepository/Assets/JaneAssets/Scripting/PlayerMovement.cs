@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     
-
     void Update() // Update is called once per frame
 
     {
@@ -79,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log("this enters sexy lady");
+            Debug.Log("jump works");
 
             rigidBody.AddForce(jump * jumpAmt, ForceMode.Impulse);
             isGrounded = false;
