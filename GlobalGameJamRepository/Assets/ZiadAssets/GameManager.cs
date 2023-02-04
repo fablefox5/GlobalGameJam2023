@@ -8,12 +8,15 @@ public class GameManager : MonoBehaviour
     public int healthPoints = 3;
     [SerializeField]
     public Health healthScript;
+    public enum LevelSegment {Neighborhood};
+
     void Awake()
     {
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+        SceneChange(LevelSegment.Neighborhood);
     }
     public void DecreaseHealth()
     {
@@ -55,5 +58,10 @@ public class GameManager : MonoBehaviour
             healthScript.hearts[2].SetActive(false);
         }
 
+    }
+    public void SceneChange(LevelSegment segment)
+    {
+        //Destroy everything in groundholder if != null
+        //Instantiate two new prefabs for ground
     }
 }
