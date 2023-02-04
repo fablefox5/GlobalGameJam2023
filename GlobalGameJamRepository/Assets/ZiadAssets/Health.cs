@@ -11,4 +11,15 @@ public class Health : MonoBehaviour
     private Sprite fullHeart;
     [SerializeField]
     private Sprite emptyHeart;*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Obstacle")
+        {
+            GameManager.instance.DecreaseHealth();
+        }
+        if (other.tag == "HealthPickup")
+        {
+            GameManager.instance.IncreaseHealth();
+        }
+    }
 }
