@@ -17,7 +17,7 @@ public class CollectibleItem : MonoBehaviour
     {
         Debug.Log("collision happens");
         
-        if (collision.tag == "HealthPickup" || collision.tag == "Obstacle")
+        if (collision.tag == "HealthPickup")
         {
             Debug.Log("you picked up something!");
             Destroy(collision.gameObject);
