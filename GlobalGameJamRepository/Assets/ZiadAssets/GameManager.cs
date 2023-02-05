@@ -131,10 +131,14 @@ public class GameManager : MonoBehaviour
         isDead = !isDead;
         /*if (restart = true)
         {*/
-        SceneManager.LoadScene("WorkingOnLevelChange");
+        LoadScenebyIndex(2);
         //SceneChange(LevelSegment.Neighborhood);
         /*restart = false;
     }*/
+    }
+    public void LoadScenebyIndex(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 
     public void StartByMove()
