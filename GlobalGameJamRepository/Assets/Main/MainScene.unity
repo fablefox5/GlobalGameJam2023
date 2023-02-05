@@ -685,8 +685,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalTreadMillSpeed: 0
   treadmillSpeed: 2
   respawnPoint: 26
+  speedModifiertest: 0
+  velocityValue: {x: 0, y: 0, z: 0}
 --- !u!65 &544638314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2225,6 +2228,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121955829}
   m_CullTransparentMesh: 1
+--- !u!1001 &1139182123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139631618691403196, guid: 39012b3c67c805b4b87c5ea80e191c9e,
+        type: 3}
+      propertyPath: m_Name
+      value: Base
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39012b3c67c805b4b87c5ea80e191c9e, type: 3}
 --- !u!1 &1247770129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,8 +2431,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalTreadMillSpeed: 0
   treadmillSpeed: 2
   respawnPoint: -26
+  speedModifiertest: 0
+  velocityValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1376881747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 42886669041006012, guid: 445dbc7e65decac4382e1e2ccd55bc05,
