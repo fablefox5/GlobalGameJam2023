@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMoveBack;
     
     Vector3 up = Vector3.zero, down = new Vector3(0, 1.5f, -8), currentDirection = Vector3.zero;
-    Vector3 nextPosition, destination, direction;
+    public Vector3 nextPosition, destination, direction;
 
     public Rigidbody rigidBody;
     public bool isGrounded; // Boolean that tells us if the player is on the ground
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         currentDirection = up;
-        nextPosition = Vector3.left;
+        nextPosition = Vector3.zero;
         destination = transform.position;
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
@@ -44,18 +44,30 @@ public class PlayerMovement : MonoBehaviour
 
         // Movement
 
-        if (transform.position.x > 2 && transform.position.x <= 3 && canMove) // Middle
+        if (transform.position.x > 0.5 && transform.position.x <= 2.5 && canMove) // Middle
         {
+            if (transform.position.y <= 2.35)
+            {
+                destination.y = 2.35f;
+            }
             canMoveForward = true;
             canMoveBack = true;
         }
-        else if (transform.position.x > -2  && transform.position.x <= 2) // Upper
+        else if (transform.position.x > -2  && transform.position.x <= 0.5) // Upper
         {
+            if (transform.position.y <= 2.72f)
+            {
+                destination.y = 2.72f;
+            }
             canMoveForward = false;
             canMoveBack = true;
         }
-        else if (transform.position.x > 3 && transform.position.x <= 4) // Bottom
+        else if (transform.position.x > 2.5 && transform.position.x <= 4.5) // Bottom
         {
+            if (transform.position.y <= 2.35)
+            {
+                destination.y = 2.35f;
+            }
             canMoveForward = true;
             canMoveBack = false;
         }
@@ -63,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.W)) && canMoveForward)
         {
 
-            nextPosition = Vector3.left*2;
+            nextPosition = Vector3.left*1.75f;
             currentDirection = Vector3.left;
             canMove = true;
 
@@ -71,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.S)) && canMoveBack)
         {
 
-            nextPosition = Vector3.right*2;
+            nextPosition = Vector3.right*1.75f;
             currentDirection = Vector3.right;
             canMove = true;
 
@@ -80,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Vector3.Distance(destination,transform.position) <= 0.00001f)
         {
-            Debug.Log("this works");
+            //Debug.Log("this works");
 
             if (canMove)
             {
