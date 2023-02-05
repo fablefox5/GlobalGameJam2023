@@ -115,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3628433120626041771}
   - component: {fileID: 3628433120626041768}
+  - component: {fileID: 7168501560968799158}
   m_Layer: 0
   m_Name: Mom
   m_TagString: Obstacle
@@ -151,3 +152,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.413763, y: 5.576861, z: 22.490658}
   m_Center: {x: -1.6350374, y: 2.2264373, z: -10.562441}
+--- !u!114 &7168501560968799158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3628433120626041769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe2173b858ba17449f6d153aadbf417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  target: {fileID: 0}
+  anim: {fileID: 3628433120147325651}
