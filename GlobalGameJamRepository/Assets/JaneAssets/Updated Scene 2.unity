@@ -2025,6 +2025,7 @@ MonoBehaviour:
   - {fileID: 8879580844766848830, guid: 9bdc9b6d6f9bd2941a440a066421af15, type: 3}
   - {fileID: 4312087769242187074, guid: b7c7c41cb21162047a53f2dcc30a27b3, type: 3}
   - {fileID: 7216409009168046130, guid: aec49979fca1b8d40bb7b095dc57bd4f, type: 3}
+  obstacles: []
   spawnOne: {fileID: 1805202098}
   spawnTwo: {fileID: 481482293}
   spawnThree: {fileID: 1425664292}
@@ -3693,3 +3694,72 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &6243035884381789025
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0961
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955340, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243035884596955341, guid: 1aa2674ccc47355459bcfd9709381f94,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Pickup Item
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1aa2674ccc47355459bcfd9709381f94, type: 3}
