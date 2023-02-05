@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7664739832231526376}
   - component: {fileID: 7664739832231526356}
-  - component: {fileID: 7664739832231526377}
   - component: {fileID: 7664739832231526380}
   - component: {fileID: 7664739832231526379}
   - component: {fileID: 7664739832231526378}
@@ -56,26 +55,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   movingPlayer: {fileID: 7664739832231526379}
---- !u!95 &7664739832231526377
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7664739832231526355}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed3ad0739de8ca94bb3a0b46cbb93192, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &7664739832231526380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +88,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 7664739832231526378}
   isGrounded: 1
+  playerAnimator: {fileID: 0}
+  ableMove: 1
+  playerHeight: 2.09
 --- !u!54 &7664739832231526378
 Rigidbody:
   m_ObjectHideFlags: 0

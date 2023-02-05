@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &18324749 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7664739833770995439, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 834493544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &79059428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1242,11 @@ PrefabInstance:
       propertyPath: canMove
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7664739832231526379, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
+        type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 18324749}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bca30d8ebe0001c4db1af87d4a68c3e8, type: 3}
 --- !u!1 &841391381 stripped
@@ -2615,7 +2626,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 1902110265}
+      objectReference: {fileID: 18324749}
     - target: {fileID: 6333674465892879951, guid: b0c72287f20f22d4082c2c9c8c99023d,
         type: 3}
       propertyPath: audioSources.Array.size
@@ -3397,12 +3408,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 834493544}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1902110265 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7664739832231526377, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 834493544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1902110266 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7664739832231526356, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
@@ -3957,6 +3962,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 2029045986}
   isGrounded: 1
+  playerAnimator: {fileID: 0}
   ableMove: 1
   playerHeight: 2.09
 --- !u!114 &2029045988

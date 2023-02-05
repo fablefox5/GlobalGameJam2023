@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 nextPosition, destination, direction;
 
     public Rigidbody rigidBody;
-    public bool isGrounded; // Boolean that tells us if the player is on the ground
-   
+    public bool isGrounded = true; // Boolean that tells us if the player is on the ground
+    public Animator playerAnimator;
 
     float laneOneXPos = -0.5f;
     float laneTwoXPos = 1.5f;
@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         if (gameObj.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            playerAnimator.SetBool("isGrounded" ,true);
         }
     }
 
@@ -164,6 +165,8 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("jump works");
 
             isGrounded = false; // The player is no longer on the ground
+            playerAnimator.SetBool("isGrounded", false);
+
 
             StartCoroutine(JumpCoolDown()); // Player is vulnerable while jumping
         }
@@ -172,7 +175,11 @@ public class PlayerMovement : MonoBehaviour
         { // When jumping
             Debug.Log("jump coroutine entered");
             isGrounded = false; // The player is in the air
+            playerAnimator.SetBool("isGrounded", false);
+
             yield return new WaitForSecondsRealtime(1); // Player is invulnerable for 3 seconds
+            playerAnimator.SetBool("isGrounded", true);
+
             isGrounded = true; // The player is on the ground and is vulnerable
         }
 
