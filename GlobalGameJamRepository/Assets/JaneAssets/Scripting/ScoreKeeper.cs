@@ -25,6 +25,10 @@ public class ScoreKeeper : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score " + (int) scoreAmount;
-        scoreAmount += pointIncreasedPerSecond * Time.deltaTime;        
+        if (GameManager.instance.healthPoints > 0)
+        {
+            scoreAmount += pointIncreasedPerSecond * Time.deltaTime;
+
+        }
     }
 }
