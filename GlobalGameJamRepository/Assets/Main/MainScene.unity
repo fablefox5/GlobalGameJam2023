@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2686,8 +2686,9 @@ MonoBehaviour:
   obstacles:
   - {fileID: 2990999411376077523, guid: 7d9a34b0db2d2c94893abb8639f279b9, type: 3}
   - {fileID: 3991277593478226828, guid: 1f9a4659bc821744a9b4cb2493169bb8, type: 3}
-  - {fileID: 2273912298620027638, guid: c06ee0e34c73cf34ab10db1cdec6545b, type: 3}
+  - {fileID: 3244582033105259411, guid: 65fb2ceefdbb6ca4ab27b04d1139a1b1, type: 3}
   - {fileID: 3351315740754982699, guid: 1e0e9b7b8367e7d4faf7e5ab1daa3b70, type: 3}
+  - {fileID: 6243035884596955341, guid: 1aa2674ccc47355459bcfd9709381f94, type: 3}
   spawnOne: {fileID: 1805202098}
   spawnTwo: {fileID: 481482293}
   spawnThree: {fileID: 1425664292}

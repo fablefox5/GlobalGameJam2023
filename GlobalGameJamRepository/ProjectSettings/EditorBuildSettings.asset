@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/MainScene.unity
     guid: c99e5ff63bc57e24d9e371659c978c71
+  - enabled: 1
+    path: Assets/LukeD/credits.unity
+    guid: ea46d7bf3c2f745458119ab45b681a75
   m_configObjects: {}
