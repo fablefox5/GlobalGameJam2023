@@ -7,6 +7,9 @@ public class Treadmill : MonoBehaviour
     private Rigidbody rb;
     public float treadmillSpeed;
     public float respawnPoint;
+    /*public float acceleration;
+    public float currentSpeed;
+    public float maxSpeed;*/
     //public GameObject gameOver;
     //public TreadmillInstantiater treadmillList;
     void Start()
@@ -27,7 +30,7 @@ public class Treadmill : MonoBehaviour
         {
             treadmillSpeed = 1f;
         }
-        rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
+        rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed * GameManager.instance.speedModifier);
         //rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
         if (transform.position.z < respawnPoint) //dies when it's off screen
         {
