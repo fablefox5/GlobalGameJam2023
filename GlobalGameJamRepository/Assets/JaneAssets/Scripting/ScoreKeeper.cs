@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
 
-    public Text scoreText; // connect reference in inspector
+    public TextMeshProUGUI scoreText; // connect reference in inspector
     public float scoreAmount;
     public float pointIncreasedPerSecond;
 
@@ -23,7 +24,7 @@ public class ScoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score" + (int) scoreAmount;
+        scoreText.text = "Score " + (int) scoreAmount;
         scoreAmount += pointIncreasedPerSecond * Time.deltaTime;        
     }
 }
