@@ -21,14 +21,19 @@ public class Health : MonoBehaviour
     {
         if (other.tag == "Obstacle") // If the player collides with an object that is an obstacle
         {
+            if (other.name == "Mom")
+            {
+                GameManager.instance.healthPoints = 0;
+            }
 
-           if (movingPlayer.isGrounded == true) // When the player is on the ground
+            if (movingPlayer.isGrounded == true) // When the player is on the ground
            {
                 Debug.Log("hurting");
                 GameManager.instance.DecreaseHealth(); // Take damage when player is on ground
             }
            
         }
+        
         if (other.tag == "HealthPickup")
         {
             GameManager.instance.IncreaseHealth();
