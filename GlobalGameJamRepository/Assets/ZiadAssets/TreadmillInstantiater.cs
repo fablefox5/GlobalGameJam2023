@@ -13,6 +13,8 @@ public class TreadmillInstantiater : MonoBehaviour
     {
         prefab1 = Instantiate(GetRandomPrefab(), spawnOne);
         prefab2 = Instantiate(GetRandomPrefab(), spawnTwo);
+        spawnOne.transform.rotation = Quaternion.Euler(0, 90, 0);
+        spawnTwo.transform.rotation = Quaternion.Euler(0, 90, 0);
     }
     public GameObject GetRandomPrefab()
     {
