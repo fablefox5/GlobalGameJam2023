@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ObstacleNode : MonoBehaviour
 {
-    [SerializeField] private GameObject[] nodeArray;
+    public GameObject[] nodeArray;
 
-    public GameObject GetNodeLocation(int num)
+    public Vector3 GetNodePosition(int num)
     {
-        return nodeArray[num];
+        return nodeArray[num].transform.position;
     }
 
 
