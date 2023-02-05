@@ -18,7 +18,10 @@ public class GameManager : MonoBehaviour
     public float speedModifier = 1;
     public float acceleration;
     public float maxSpeed;
-    private int index; 
+    private int index;
+    public AudioSource playerSteps;
+    
+  
 
     //booleans
     public bool isHurt = false;
@@ -71,6 +74,7 @@ public class GameManager : MonoBehaviour
         } else
         {
             isDead = true;
+            playerSteps.Stop();
             playerAnimator.SetBool("isDead", true);
         }
     }
