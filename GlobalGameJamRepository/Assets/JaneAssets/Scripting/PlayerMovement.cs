@@ -24,9 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public bool ableMove = true;
     public float playerHeight = 2.09f;
 
-
-
-
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -160,6 +157,23 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKey(KeyCode.S) && transform.position.x < laneThreeXPos)
         {
             transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(laneThreeXPos, 0f, 0f), upAndDownSpeed * Time.deltaTime);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) // When the player is pressing space and is on the ground
+        {
+            Debug.Log("jump works");
+
+            isGrounded = false; // The player is no longer on the ground
+
+            StartCoroutine(JumpCoolDown()); // Player is vulnerable while jumping
+        }
+
+        IEnumerator JumpCoolDown()
+        { // When jumping
+            Debug.Log("jump coroutine entered");
+            isGrounded = false; // The player is in the air
+            yield return new WaitForSecondsRealtime(1); // Player is invulnerable for 3 seconds
+            isGrounded = true; // The player is on the ground and is vulnerable
         }
 
     }
