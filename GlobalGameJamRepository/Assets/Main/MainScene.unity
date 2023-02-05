@@ -1340,6 +1340,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &841391385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6333674465892879951, guid: b0c72287f20f22d4082c2c9c8c99023d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1490584165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841391381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d9db8f68b85d7428e8de28a91e03d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &841391387
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2628,6 +2640,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 42886668504593873, guid: 445dbc7e65decac4382e1e2ccd55bc05,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 42886668504593873, guid: 445dbc7e65decac4382e1e2ccd55bc05,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 841391385}
+    - target: {fileID: 42886668504593873, guid: 445dbc7e65decac4382e1e2ccd55bc05,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadScenebyIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 42886668504593873, guid: 445dbc7e65decac4382e1e2ccd55bc05,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 42886668554281950, guid: 445dbc7e65decac4382e1e2ccd55bc05,
         type: 3}
       propertyPath: m_IsActive
