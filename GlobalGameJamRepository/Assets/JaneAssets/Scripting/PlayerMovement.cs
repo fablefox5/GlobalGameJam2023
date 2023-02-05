@@ -44,17 +44,17 @@ public class PlayerMovement : MonoBehaviour
 
         // Movement
 
-        if (transform.position.x > 1 && transform.position.x <= 1.5 && canMove)
+        if (transform.position.x > 2 && transform.position.x <= 3 && canMove) // Middle
         {
             canMoveForward = true;
             canMoveBack = true;
         }
-        else if (transform.position.x > 0  && transform.position.x <= 1)
+        else if (transform.position.x > -2  && transform.position.x <= 2) // Upper
         {
             canMoveForward = false;
             canMoveBack = true;
         }
-        else if (transform.position.x > 1.5 && transform.position.x <= 2)
+        else if (transform.position.x > 3 && transform.position.x <= 4) // Bottom
         {
             canMoveForward = true;
             canMoveBack = false;
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.W)) && canMoveForward)
         {
 
-            nextPosition = Vector3.left;
+            nextPosition = Vector3.left*2;
             currentDirection = Vector3.left;
             canMove = true;
 
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.S)) && canMoveBack)
         {
 
-            nextPosition = Vector3.right;
+            nextPosition = Vector3.right*2;
             currentDirection = Vector3.right;
             canMove = true;
 

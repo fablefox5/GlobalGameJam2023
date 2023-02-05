@@ -19,7 +19,7 @@ public class Treadmill : MonoBehaviour
         {
             treadmillSpeed = 0f; //stops ground moving, need new variable for pausing time.timescale = 0;
             //gameOver.SetActive(true);
-            //canMove = false;
+            GameManager.instance.healthScript.movingPlayer.canMove = false;
         } else if (GameManager.instance.isHurt == true)
         {
             treadmillSpeed = 0.5f;
