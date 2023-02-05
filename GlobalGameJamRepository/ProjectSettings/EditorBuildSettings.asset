@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LukeD/lukeSceneTest.unity
     guid: fc49030d6f6bdae4b8b2ae99b6fd5cb9
+  - enabled: 1
+    path: Assets/JaneAssets/MainMenu.unity
+    guid: aa413ad2570c9eb47897f7127b3486df
   m_configObjects: {}
