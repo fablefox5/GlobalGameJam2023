@@ -55,6 +55,12 @@ public class GameManager : MonoBehaviour
     }
     public void DecreaseHealth()
     {
+        if (healthPoints == 0) // When no more health
+        {
+            isDead = true; // Player is dead
+            playerAnimator.SetBool("isDead", true);
+            gameOver.SetActive(true);
+        }
         if (healthPoints > 0)
         {
             healthPoints--;

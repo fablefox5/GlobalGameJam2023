@@ -29,7 +29,7 @@ public class MomClosesIn : MonoBehaviour
         }
         IEnumerator DisappearAfter()
         {
-            yield return new WaitForSecondsRealtime(2); // Disappear after 2 seconds
+            yield return new WaitForSecondsRealtime(1); // Disappear after 2 seconds
             
             if (spr.color.a > 0)
             {
