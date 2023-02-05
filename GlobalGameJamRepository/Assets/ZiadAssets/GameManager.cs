@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public enum LevelSegment {Neighborhood};
     public Animator playerAnimator;
     public GameObject groundParent;
+    public GameObject gameOver;
 
     //booleans
     public bool isHurt = false;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
             {
                 isDead = true; // Player is dead
                 playerAnimator.SetBool("isDead", true);
+                gameOver.SetActive(true);
             } else // When there is still health
             {
                 StartCoroutine(HurtTimer()); // Start hurt timer
@@ -114,9 +117,10 @@ public class GameManager : MonoBehaviour
         isDead = !isDead;
         /*if (restart = true)
         {*/
-        SceneChange(LevelSegment.Neighborhood);
-            /*restart = false;
-        }*/
+        SceneManager.LoadScene("WorkingOnLevelChange");
+        //SceneChange(LevelSegment.Neighborhood);
+        /*restart = false;
+    }*/
     }
 
     public void StartByMove()
