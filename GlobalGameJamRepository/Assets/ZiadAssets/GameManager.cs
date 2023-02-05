@@ -15,13 +15,23 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
     public AudioSource randomSound;
     public AudioClip[] audioSources;
+    public float speedModifier = 1;
+    public float acceleration;
+    public float maxSpeed;
 
     //booleans
     public bool isHurt = false;
     public bool isDead = false;
     //public bool restart = false; //differentiates setting isdead to true for a level reset or an unpause
     
-
+    void Update()
+    {
+        speedModifier += acceleration;
+        if (speedModifier > maxSpeed)
+        {
+            speedModifier = maxSpeed;
+        }
+    }
     void Awake()
     {
         if (instance == null)

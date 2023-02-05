@@ -2720,6 +2720,9 @@ MonoBehaviour:
   audioSources:
   - {fileID: 8300000, guid: 7f93d2da0223cfb48b7c99dcc620d416, type: 3}
   - {fileID: 8300000, guid: 88beebe4a8cdc0445b0efd98d14f6647, type: 3}
+  speedModifier: 1
+  acceleration: 0.0001
+  maxSpeed: 4
   isHurt: 0
   isDead: 0
 --- !u!4 &1987223453
@@ -2748,8 +2751,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

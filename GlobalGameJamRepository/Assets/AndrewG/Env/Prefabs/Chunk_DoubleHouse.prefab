@@ -4400,6 +4400,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treadmillSpeed: 2
   respawnPoint: -33
+  acceleration: 0.005
+  currentSpeed: 1
+  maxSpeed: 15
 --- !u!1 &7575018939907987213
 GameObject:
   m_ObjectHideFlags: 0
