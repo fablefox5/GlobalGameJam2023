@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float speedModifier = 1;
     public float acceleration;
     public float maxSpeed;
+    private int index; 
 
     //booleans
     public bool isHurt = false;
@@ -26,7 +27,16 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        speedModifier += acceleration;
+        index++;
+        if (index % 5 == 0)
+        {
+            speedModifier += acceleration;
+            if(index > 1000)
+            {
+                index = 0;
+            }
+        }
+        
         if (speedModifier > maxSpeed)
         {
             speedModifier = maxSpeed;
