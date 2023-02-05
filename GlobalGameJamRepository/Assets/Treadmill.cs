@@ -20,7 +20,6 @@ public class Treadmill : MonoBehaviour
             treadmillSpeed = 0f; //stops ground moving, need new variable for pausing time.timescale = 0;
             //gameOver.SetActive(true);
             //canMove = false;
-            //GameManager.instance.restart = true; //to differentiate between stopping
         } else if (GameManager.instance.isHurt == true)
         {
             treadmillSpeed = 0.5f;
@@ -30,7 +29,7 @@ public class Treadmill : MonoBehaviour
         }
         rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
         //rb.velocity = new Vector3(0, 0, -3 * treadmillSpeed);
-        if (transform.position.z < -respawnPoint) //dies when it's off screen
+        if (transform.position.z < respawnPoint) //dies when it's off screen
         {
             //Debug.Log("Andrewisrekt");
             Destroy(this.gameObject);

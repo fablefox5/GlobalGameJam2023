@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.03
+      value: 1.005
       objectReference: {fileID: 0}
     - target: {fileID: 1733544358830667418, guid: 39012b3c67c805b4b87c5ea80e191c9e,
         type: 3}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treadmillSpeed: 2
-  respawnPoint: 16
+  respawnPoint: -40
 --- !u!1001 &1226100203728917627
 PrefabInstance:
   m_ObjectHideFlags: 0
