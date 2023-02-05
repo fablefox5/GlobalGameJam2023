@@ -347,9 +347,10 @@ GameObject:
   - component: {fileID: 7308183374375030007}
   - component: {fileID: 5963955147532206930}
   - component: {fileID: 8439973104424712088}
+  - component: {fileID: 6604324687387986753}
   m_Layer: 0
   m_Name: CarPrefab
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,3 +429,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6604324687387986753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935398216499615309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01891246, y: 0.018190578, z: 0.044557262}
+  m_Center: {x: 5.6498256e-17, y: 0.0040952894, z: 0.007951424}
