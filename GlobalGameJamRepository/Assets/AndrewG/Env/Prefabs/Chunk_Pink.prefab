@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treadmillSpeed: 2
-  respawnPoint: -40
+  respawnPoint: -33
 --- !u!54 &7881093217651599478
 Rigidbody:
   m_ObjectHideFlags: 0

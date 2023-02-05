@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treadmillSpeed: 2
-  respawnPoint: -40
+  respawnPoint: -33
 --- !u!1001 &1226100203728917627
 PrefabInstance:
   m_ObjectHideFlags: 0

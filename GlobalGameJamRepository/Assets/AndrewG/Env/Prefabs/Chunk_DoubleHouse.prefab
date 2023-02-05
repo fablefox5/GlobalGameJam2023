@@ -4484,7 +4484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treadmillSpeed: 2
-  respawnPoint: -40
+  respawnPoint: -33
 --- !u!1 &7575018939907987213
 GameObject:
   m_ObjectHideFlags: 0
