@@ -6,7 +6,10 @@ public class ChanclaSpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject chanclaType;
+    //[SerializeField]
+    //private GameObject chanclaDrop;
     private int randomNumber;
+
     void Start()
     {
         InvokeRepeating("RandomSpawnChancla", 8f, 3f);
@@ -18,7 +21,11 @@ public class ChanclaSpawner : MonoBehaviour
         if (randomNumber >= 1 && randomNumber <= 3)
         {
             Instantiate(chanclaType);
+            //Instantiate(chanclaDrop);
             Debug.Log("InstantiateChancla");
         }
+
     }
+
+
 }
