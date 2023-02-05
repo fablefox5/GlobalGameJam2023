@@ -134,6 +134,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2897407771250740558}
   - component: {fileID: 2897407771250740557}
+  - component: {fileID: 4780856769554175653}
+  - component: {fileID: 7128669493360905259}
   m_Layer: 0
   m_Name: Chunk_PowerLine
   m_TagString: Untagged
@@ -207,6 +209,36 @@ MonoBehaviour:
   - {fileID: 2897407770337082852}
   - {fileID: 2897407771870176002}
   - {fileID: 2897407770930200495}
+--- !u!114 &4780856769554175653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2897407771250740556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treadmillSpeed: 2
+  respawnPoint: -33
+--- !u!54 &7128669493360905259
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2897407771250740556}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2897407771293149586
 GameObject:
   m_ObjectHideFlags: 0

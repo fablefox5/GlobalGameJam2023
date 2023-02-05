@@ -2271,6 +2271,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7692096391382201055}
   - component: {fileID: 325577470458945942}
+  - component: {fileID: 7129304606757518470}
+  - component: {fileID: 7880017404740426880}
   m_Layer: 0
   m_Name: Chunk_Red
   m_TagString: Untagged
@@ -2334,6 +2336,36 @@ MonoBehaviour:
   - {fileID: 326913566996748286}
   - {fileID: 3640238370272853771}
   - {fileID: 3847442609105312107}
+--- !u!114 &7129304606757518470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925083304276573498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treadmillSpeed: 2
+  respawnPoint: -33
+--- !u!54 &7880017404740426880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925083304276573498}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &585718700209724318
 PrefabInstance:
   m_ObjectHideFlags: 0
