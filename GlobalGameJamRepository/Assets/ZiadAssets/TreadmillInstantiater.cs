@@ -44,6 +44,7 @@ public class TreadmillInstantiater : MonoBehaviour
         if (prefab1 == null)
         {
             prefab1 = (GameObject)Instantiate(GetRandomPrefab(), spawnSix);
+          
             SpawnObstacleCheck(prefab1);
         }
         if (prefab2 == null)
@@ -54,22 +55,27 @@ public class TreadmillInstantiater : MonoBehaviour
         if (prefab3 == null)
         {
             prefab3 = (GameObject)Instantiate(GetRandomPrefab(), spawnSix);
+            
             SpawnObstacleCheck(prefab3);
         }
         if (prefab4 == null)
         {
             prefab4 = (GameObject)Instantiate(GetRandomPrefab(), spawnSix);
+            
             SpawnObstacleCheck(prefab4);
         }
         if (prefab5 == null)
         {
             prefab5 = (GameObject)Instantiate(GetRandomPrefab(), spawnSix);
+             
             SpawnObstacleCheck(prefab5);
         }
         if (prefab6 == null)
         {
             prefab6 = (GameObject)Instantiate(GetRandomPrefab(), spawnSix);
-            SpawnObstacleCheck(prefab6);
+            
+            SpawnObstacleCheck(prefab6); 
+            
         }
         
     }
