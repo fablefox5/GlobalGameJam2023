@@ -610,8 +610,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalTreadMillSpeed: 0
   treadmillSpeed: 2
   respawnPoint: 26
+  speedModifiertest: 0
+  velocityValue: {x: 0, y: 0, z: 0}
 --- !u!65 &544638314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1245,7 +1248,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4bd24abfa0be40349ad03f427fe3ae26, type: 2}
+      objectReference: {fileID: 2100000, guid: 12e1ef6f0ed9a4345a8666cb1c8d06a1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bca30d8ebe0001c4db1af87d4a68c3e8, type: 3}
 --- !u!1 &841391381 stripped
@@ -1953,8 +1956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c66afd8ac4664ab0bc205cadcb39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalTreadMillSpeed: 0
   treadmillSpeed: 2
   respawnPoint: -26
+  speedModifiertest: 0
+  velocityValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1376881747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 42886669041006012, guid: 445dbc7e65decac4382e1e2ccd55bc05,
@@ -2320,7 +2326,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 1902110265}
+      objectReference: {fileID: 0}
     - target: {fileID: 6333674465892879951, guid: b0c72287f20f22d4082c2c9c8c99023d,
         type: 3}
       propertyPath: audioSources.Array.size
@@ -3082,12 +3088,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 834493544}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1902110265 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7664739832231526377, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 834493544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1902110266 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7664739832231526356, guid: bca30d8ebe0001c4db1af87d4a68c3e8,
@@ -3546,6 +3546,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 2029045986}
   isGrounded: 1
+  playerAnimator: {fileID: 0}
   ableMove: 1
   playerHeight: 2.09
 --- !u!114 &2029045988

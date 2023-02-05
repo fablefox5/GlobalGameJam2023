@@ -179,9 +179,9 @@ public class PlayerMovement : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(1); // Player is invulnerable for 3 seconds
             playerAnimator.SetBool("isGrounded", true);
-
             isGrounded = true; // The player is on the ground and is vulnerable
         }
+
 
     }
 
