@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1904,8 +1904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundPrefabs:
   - {fileID: 8879580844766848830, guid: 9bdc9b6d6f9bd2941a440a066421af15, type: 3}
-  - {fileID: 4312087769242187074, guid: b7c7c41cb21162047a53f2dcc30a27b3, type: 3}
-  - {fileID: 7216409009168046130, guid: aec49979fca1b8d40bb7b095dc57bd4f, type: 3}
+  - {fileID: 8879580844766848830, guid: 9bdc9b6d6f9bd2941a440a066421af15, type: 3}
+  obstacles:
+  - {fileID: 2990999411376077523, guid: 7d9a34b0db2d2c94893abb8639f279b9, type: 3}
+  - {fileID: 4095445176892686012, guid: c5af6e2d23ed0a64da302efb01f94017, type: 3}
   spawnOne: {fileID: 1805202098}
   spawnTwo: {fileID: 481482293}
   spawnThree: {fileID: 1425664292}
@@ -2716,6 +2718,8 @@ MonoBehaviour:
   playerAnimator: {fileID: 2029045985}
   groundParent: {fileID: 1436490798}
   gameOver: {fileID: 287265763}
+  randomSound: {fileID: 0}
+  audioSources: []
   isHurt: 0
   isDead: 0
 --- !u!4 &1987223453
@@ -2781,7 +2785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029045979}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.41, y: 2.09, z: -8.38}
+  m_LocalPosition: {x: 1.5, y: 2.09, z: -8.38}
   m_LocalScale: {x: 7.193813, y: 39.965626, z: 4.795875}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2837,12 +2841,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cf489bc6b5cce4dba906fa90463350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upAndDownSpeed: 3
+  upAndDownSpeed: 0.1
   canMove: 0
   canMoveForward: 0
   canMoveBack: 0
+  nextPosition: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 2029045986}
   isGrounded: 1
+  ableMove: 1
 --- !u!114 &2029045988
 MonoBehaviour:
   m_ObjectHideFlags: 0

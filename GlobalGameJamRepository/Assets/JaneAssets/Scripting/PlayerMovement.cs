@@ -15,6 +15,18 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rigidBody;
     public bool isGrounded; // Boolean that tells us if the player is on the ground
    
+
+    float laneOneXPos = -0.5f;
+    float laneTwoXPos = 1.5f;
+    float laneThreeXPos = 3.5f;
+    int currentLane = 1;
+    float laneChangeXPos = 0f;
+    public bool ableMove = true;
+    public float playerHeight = 2.09f;
+
+
+
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -27,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
     
     void Update() // Update is called once per frame
     {
-        Move();
+        //Move();
+        MoveThree();
     }
 
     private void OnCollisionEnter(Collision gameObj)
@@ -134,5 +147,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+
+
+
+    void MoveThree()
+    {
+        if(Input.GetKey(KeyCode.W) && transform.position.x > laneOneXPos)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(laneOneXPos, 0f, 0f), upAndDownSpeed * Time.deltaTime);
+        }
+        else if(Input.GetKey(KeyCode.S) && transform.position.x < laneThreeXPos)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(laneThreeXPos, 0f, 0f), upAndDownSpeed * Time.deltaTime);
+        }
+
+    }
+
+
 
 }
