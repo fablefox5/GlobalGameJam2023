@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Animator playerAnimator;
     public GameObject groundParent;
     public GameObject gameOver;
+    public AudioSource randomSound;
+    public AudioClip[] audioSources;
 
     //booleans
     public bool isHurt = false;
@@ -33,6 +35,8 @@ public class GameManager : MonoBehaviour
         if (healthPoints > 0)
         {
             healthPoints--;
+            randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+            randomSound.Play();
             Debug.Log(healthPoints);
             UpdateHealth();
             if (healthPoints == 0) // When no more health
